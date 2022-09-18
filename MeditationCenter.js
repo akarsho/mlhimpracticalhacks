@@ -57,7 +57,6 @@ export function Section1RegularButton1_click(event) {
 			let num = Math.floor(Math.random() * 5);
 			let num2 = Math.floor(Math.random() * 10);
 			wixData.get("images",img[num]).then((item) => {
-				
 				$w('#image1').src = item.music;
 				$w('#audioPlayer2').src = music[num2];
 				$w('#image1').show('fade', { duration: 2000, delay: 0 }).then(()=>{
@@ -65,10 +64,8 @@ export function Section1RegularButton1_click(event) {
 				});
 				$w('#image1').hide('fade', { duration: 2000, delay: 0 }).then(() => {
 					$w('#audioPlayer1').play();
-				});
-				
+				});				
 			})
-			
 		}, 5000)
 		
 	})
